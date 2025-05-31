@@ -1,0 +1,15 @@
+clear
+sudo adduser javier
+sudo usermod -aG sudo javier
+sudo getent group sudo
+sudo groupadd guest
+sudo adduser perez
+sudo usermod -aG guest perez
+sudo getent group guest
+sudo deluser perez
+sudo groupdel guest
+sudo getent group guest
+sudo deluser javier
+sudo getent group sudo
+sudo getent group guest
+history
